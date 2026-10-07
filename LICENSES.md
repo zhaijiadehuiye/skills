@@ -8,3 +8,5 @@ This repository aggregates upstream Skill files without changing their contents.
 - `skills/find-skills/` is from the CodeBuddy Official `find-skills` plugin, version `1.0.0`, whose plugin metadata declares MIT licensing.
 
 Consult each upstream project for current terms and updates before redistributing modified versions.
+
+- `skills/life-decision-guide/` is by eternity4719, copied unchanged from [HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter). The upstream repository is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); see the source repository's [LICENSE](https://github.com/eternity4719/HowToLiveBetter/blob/main/LICENSE).
