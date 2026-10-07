@@ -6,6 +6,7 @@
 
 | Skill | 来源 | 用途 | 依赖 | 可执行脚本 | 最近同步版本 |
 | --- | --- | --- | --- | --- | --- |
+| `life-decision-guide` | [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) | 按《高性价比人生指南》检索并比较具体人生决策 | 网络访问；工作区没有正文时按需读取上游仓库 | 否 | `main` 快照（2026-10-07） |
 | `find-skills` | CodeBuddy Official plugin `find-skills` | 从 SkillHub、Vercel Skills 和 ClawHub 发现可安装能力 | 网络访问；按需使用对应注册表 | 否 | `1.0.0`（本机快照，2026-09-28） |
 | `frontend-design` | CodeBuddy Teams `general-skills` | 创建有明确视觉方向的生产级前端界面 | 由宿主 Agent 执行；无固定运行时 | 否 | `1.0.0`（本机快照，2026-09-28） |
 | `agent-browser` | CodeBuddy Official plugin；上游 [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 浏览器自动化、截图、表单填写和页面提取 | Node.js 18+、npm、网络；首次使用可能下载 Chromium | 是：`scripts/setup.sh`、`templates/` | `1.3.0`（本机快照，2026-09-28） |
@@ -25,10 +26,10 @@
 ./install.sh
 ```
 
-默认安装到 `~/.codex/skills/`。也可以指定目标目录：
+默认安装到 `~/.agents/skills/`。也可以指定目标目录：
 
 ```bash
-CODEX_SKILLS_DIR="$HOME/.codex/skills" ./install.sh
+CODEX_SKILLS_DIR="$HOME/.agents/skills" ./install.sh
 ```
 
 脚本逐项创建符号链接。目标位置已有同名文件、目录或其他链接时会保留并跳过；再次运行不会覆盖或破坏已有安装。
@@ -39,7 +40,7 @@ CODEX_SKILLS_DIR="$HOME/.codex/skills" ./install.sh
 ./cloud-setup.sh
 ```
 
-目标目录优先使用 `CODEX_CAPABILITY_DIR`，其次使用 `CODEX_SKILLS_DIR`；未设置时，在存在 `/workspace` 的 sandbox 中使用 `/workspace/.codex/skills`，否则回退到 `~/.codex/skills/`。
+目标目录优先使用 `CODEX_CAPABILITY_DIR`，其次使用 `CODEX_SKILLS_DIR`；未设置时，在存在 `/workspace` 的 sandbox 中使用 `/workspace/.agents/skills`，否则回退到 `~/.agents/skills/`。
 
 ## 安全与归属
 
