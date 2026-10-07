@@ -7,9 +7,9 @@ if [[ -n "${CODEX_CAPABILITY_DIR:-}" ]]; then
 elif [[ -n "${CODEX_SKILLS_DIR:-}" ]]; then
   capability_dir=$CODEX_SKILLS_DIR
 elif [[ -d /workspace ]]; then
-  capability_dir=/workspace/.codex/skills
+  capability_dir=/workspace/.agents/skills
 else
-  capability_dir=${HOME:?HOME must be set}/.codex/skills
+  capability_dir=${HOME:?HOME must be set}/.agents/skills
 fi
 
 CODEX_SKILLS_DIR="$capability_dir" "$repo_root/install.sh"
